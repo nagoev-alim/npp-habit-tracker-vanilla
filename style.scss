@@ -9,16 +9,16 @@
 @import 'assets/scss/config/global';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-//.app-author {
-//  position: fixed;
-//  bottom: 30px;
-//  right: 30px;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  z-index: 20;
-//}
-//
+.app-author {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
 .app-container {
   --gap: 15px;
   //display: grid;
@@ -63,6 +63,8 @@
     [data-list] {
       display: grid;
       gap: var(--gap);
+      max-height: 80vh;
+      overflow: auto;
     }
 
     button {
@@ -70,6 +72,10 @@
       height: var(--size);
       width: var(--size);
       padding: 4px;
+
+      img {
+        width: 70%;
+      }
 
       &.active {
         background-color: var(--bcs-grey-3);
@@ -83,9 +89,24 @@
 
   // Side
   .side {
-    display: grid;
-    gap: var(--gap);
-    padding: var(--gap);
+
+    .side-content {
+      display: grid;
+      gap: var(--gap);
+      padding: var(--gap);
+    }
+
+    .welcome-screen {
+      display: grid;
+      gap: 10px;
+      padding: var(--gap);
+
+      h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
 
     .header {
       display: grid;
@@ -95,6 +116,19 @@
       @media (min-width: 576px) {
         align-items: center;
         grid-template-columns: 1fr 250px;
+      }
+
+      &__name {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--gap);
+
+        button {
+          background-color: transparent;
+          border: 0;
+          padding: 4px;
+        }
       }
     }
 
@@ -129,10 +163,15 @@
     .body {
       display: grid;
       gap: var(--gap);
+      max-height: 85vh;
+      overflow: auto;
+      padding-bottom: 30px;
 
       ul {
         display: grid;
         gap: var(--gap);
+        max-height: 80vh;
+        overflow: auto;
       }
 
       .day {
@@ -140,6 +179,7 @@
         border-radius: 4px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.05), 0 25px 35px rgba(0, 0, 0, 0.03);
         overflow: hidden;
+        min-height: 87px;
 
         @media (min-width: 768px) {
           display: grid;

@@ -1,12 +1,14 @@
 ## 📦 Habit Tracker App
 
-In this app you can control your habits.
+In this app you can create and control your habits.
 
 ---
 
 #### 🌄 Screenshots:
 
-![App Screenshot](assets/images/preview.png)
+![App Screenshot](assets/images/preview01.jpg)
+![App Screenshot](assets/images/preview02.jpg)
+![App Screenshot](assets/images/preview03.jpg)
 
 -----
 
